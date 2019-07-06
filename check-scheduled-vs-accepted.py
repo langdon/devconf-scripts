@@ -7,7 +7,7 @@ import argparse
 import os.path
 import re
 import collections
-from devconf_shared import Canonical_Talk, Confirmed_Talk, Sched_Talk, get_talk, write_output
+from devconf_talks import Canonical_Talk, Confirmed_Talk, Sched_Talk, get_talk, write_output
 
 def test_file(fn):
     if not os.path.isfile(fn):

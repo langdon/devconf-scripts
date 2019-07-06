@@ -70,7 +70,6 @@ class Sched_Talk():
         talk['Collect y/n']       = 'Y' if can_talk.feedback_y else 'N'
         return talk
 
-
 class Confirmed_Talk():
     field_names = ["ID", "Track", "Order", "Title", "Speaker", "Confirmed", "Constraints", "Abstract"]
 
@@ -189,12 +188,6 @@ class Canonical_Talk():
             for talk in tmp:
                 talks[talk["ID"]] = Canonical_Talk.to_canonical_talk(talk)
         return talks
-
-def get_talk_from_dict(talks, id):
-    loc_talks = talks
-    if isinstance(talks, dict):
-        loc_talks = [ v for v in talks.values() ]
-    return next(item for item in loc_talks if item[label] == str(value))
 
 def get_talk(talks, value, label = "ID"):
     loc_talks = talks
