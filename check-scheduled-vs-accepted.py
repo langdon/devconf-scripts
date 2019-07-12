@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+"""
+You can use this script to compare what talks you have scheduled vs the ones 
+that you have accepted. Imports all the talks from a sched sessions export then 
+loops across all the talks in a csv. The "accepted csv" comes from Langdon's 
+original DevConf.US Planning spreadsheet(s) but can be any arbitrary sheet as 
+long as the format is the same as what is described in --help."
+"""
 
 import csv
 import pprint
@@ -21,7 +28,7 @@ confirmed_talks = []
 remove_parens = re.compile(r"\(.*?\)", re.IGNORECASE)
 
 # construct the argument parse and parse the arguments
-ap = argparse.ArgumentParser()
+ap = argparse.ArgumentParser(description=__doc__)
 ap.add_argument("-s", "--scheduled", required=True, dest="scheduled_talks_fn", 
 	help="csv file with scheduled talks in sched format")
 ap.add_argument("-c", "--confirmed", required=True, dest="confirmed_talks_fn", 
