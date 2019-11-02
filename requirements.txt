@@ -60,7 +60,7 @@ paramiko==2.5.0
 Paste==2.0.3
 perf==0.1
 pid==2.2.3
-Pillow==5.4.1
+Pillow==6.2.0
 ply==3.11
 powerline-status==2.7
 productmd==1.21
