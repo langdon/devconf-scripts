@@ -64,7 +64,7 @@ Pillow==5.4.1
 ply==3.11
 powerline-status==2.7
 productmd==1.21
-psutil==5.4.3
+psutil==5.6.6
 pwquality==1.4.0
 pyasn1==0.4.4
 pycairo==1.18.1
