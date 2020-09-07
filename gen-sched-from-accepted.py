@@ -7,7 +7,8 @@ import argparse
 import os.path
 import re
 import collections
-from devconf_talks import Canonical_Talk, Confirmed_Talk, Sched_Talk, get_talk, write_output
+from devconf_talks import Canonical_Talk, Confirmed_Talk, Sched_Talk, Accepted_Talk, get_talk
+#, .write_output
 
 def test_file(fn):
     if not os.path.isfile(fn):
@@ -59,4 +60,4 @@ for c_talk_id in confirmed_talks:
         a_talk.published = True
         sched_talks.append(Sched_Talk.to_sched(a_talk))
 
-write_output(sched_talks, output_fn, Sched_Talk.field_names)
+Sched_Talk.write_output(sched_talks, output_fn, Sched_Talk.field_names)
